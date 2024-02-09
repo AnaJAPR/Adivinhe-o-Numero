@@ -19,8 +19,9 @@ while jogar == True:
             print(f"Ok, {nome_do_jogador}. Até logo! ")
             jogar = False
             break
-
+        
         elif escolha_de_jogar == 1:
+            pontuacao_total = 0
             print(f"Vamos jogar então {nome_do_jogador}!")
             sleep(1)
             print("Você tem 10 chances de acertar o número sorteado de 1 a 100!")
@@ -31,11 +32,11 @@ while jogar == True:
                 num_chutado = int(input("Qual é o seu chute? "))
                 quant_chutes += 1
                 if num_chutado > num_sorteado:
-                    print("Chute mais baixo!")
+                    print("Chute mais baixo!\n")
                 elif num_chutado < num_sorteado:
-                    print("Chute mais alto!")
+                    print("Chute mais alto!\n")
                 else:
-                    print("Parabéns, você acertou o número!")
+                    print("Parabéns, você acertou o número!\n")
                     quant_chutes = 10
                     sleep(1)
                     print("Gostaria de continuar o jogo?")
@@ -51,6 +52,7 @@ while jogar == True:
     except:
         print("Resposta inválida, vamos começar novamente...")
         sleep(2)
+        print("\n\n")
         print("Gostaria de jogar Adivinhe o Número? ")
         sleep(1)
         print("0.Não \n1.Sim")
